@@ -9,9 +9,8 @@ import (
 
 func Alert(message string, token string, chatId string) {
 
-	token := "6320852229:AAHtYHK9ZE_83RObpEiA5wHXUfsh0F_Fmxk"
-	chatId := "-877889189" // 替换为你的Telegram群组或频道ID
-	text := "send alert message"
+	token = "6320852229:AAHtYHK9ZE_83RObpEiA5wHXUfsh0F_Fmxk"
+	chatId = "-877889189" // 替换为你的Telegram群组或频道ID
 
 	apiUrl := "https://api.telegram.org/bot" + token + "/sendMessage"
 
@@ -19,7 +18,7 @@ func Alert(message string, token string, chatId string) {
 		apiUrl,
 		url.Values{
 			"chat_id": {chatId},
-			"text":    {text},
+			"text":    {message},
 		})
 
 	if err != nil {
